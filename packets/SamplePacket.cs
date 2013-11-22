@@ -11,7 +11,15 @@ namespace MulticastUDP.packets {
         public SamplePacket(byte[] theBytes) : base(theBytes){}
         
         public SamplePackdet(SamplePacket thePacket) : base(thePacket) {
-            DoubleValue
+            DoubleValue = thePacket.DoubleValue;
+            StringValue = thePacket.StringValue;
+            DateTimeValue = thePacket.DateTimeValue;
+        }
+        
+        protected override void setDefaultValues() {
+            DoubleValue = 0;
+            StringValue = "Sample"
+            DateTimeValue = DateTime.Now();
         }
         
     }
