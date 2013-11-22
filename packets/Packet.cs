@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 
-namespace com.csf.netutils.packets {
+namespace MulticastUDP.packets {
     public abstract class Packet {
         private SortedDictionary<string, PropertyInfo> m_OrderedProperties = new SortedDictionary<string, PropertyInfo>();
         private ConcurrentDictionary<string,int> m_PropertyIndexes = new ConcurrentDictionary<string,int>();
