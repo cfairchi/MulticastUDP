@@ -2,6 +2,10 @@ using System.ComponentModel;
 using com.csf.netutils.packets;
 
 namespace com.csf.NetUtils.udp {
+    
+    // The HeartBeat class os responsible for sending out periodic "HeartBeat" packets.
+    // Currently configured to send heartbeat every 10 seconds.  Allows clients to 
+    // detect servers that exist on the the same multicast address/port
     public class HeartBeat {
         private Packet.PACKETTYPE thePacketType, UDPMultiCastServer theUDPServer);
         private BackgroundWorker m_HeartBeatWorker;
